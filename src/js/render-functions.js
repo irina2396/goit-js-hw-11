@@ -3,6 +3,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
 const lightbox = new SimpleLightbox('.gallery a');
+const loader = document.querySelector('.loader')
 
 export function createGallery(images) {
     const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
@@ -40,10 +41,10 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-    document.getElementById('loader').classList.add('active');
+    loader.classList.add('active');
 }
 
 export function hideLoader() {
-    document.getElementById('loader').classList.remove('active');
+    loader.classList.remove('active');
 }
 
