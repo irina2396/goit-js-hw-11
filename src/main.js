@@ -41,7 +41,7 @@ form.addEventListener('submit', async (e) => {
         message: 'Something went wrong.',
         position: 'topRight',
     });
-    console.error(err);
+    console.error(error);
     } finally {
         hideLoader();
     }
